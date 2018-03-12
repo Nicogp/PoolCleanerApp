@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nicols.poolcleaner.Main2Activity">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnDesconectarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Desconectar"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp"
+            android:text="5 de Marzo 2018" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp"
+            android:text="15:51" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="470dp"
+        android:layout_height="307dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <pl.pawelkleczkowski.customgauge.CustomGauge
+            android:id="@+id/gaugeCalentador"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="28dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            app:gaugeEndValue="100"
+            app:gaugePointEndColor="#0D47A1"
+            app:gaugePointStartColor="#80D8FF"
+            app:gaugeStartAngle="135"
+            app:gaugeStartValue="-15"
+            app:gaugeStrokeCap="ROUND"
+            app:gaugeStrokeColor="#BDBDBD"
+            app:gaugeStrokeWidth="10dp"
+            app:gaugeSweepAngle="270" />
+
+        <pl.pawelkleczkowski.customgauge.CustomGauge
+            android:id="@+id/gaugeAgua"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignTop="@+id/gaugeCalentador"
+            android:layout_marginStart="59dp"
+            android:layout_toEndOf="@+id/gaugeCalentador"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            app:gaugeEndValue="100"
+            app:gaugePointEndColor="#0D47A1"
+            app:gaugePointStartColor="#80D8FF"
+            app:gaugeStartAngle="135"
+            app:gaugeStartValue="-15"
+            app:gaugeStrokeCap="ROUND"
+            app:gaugeStrokeColor="#BDBDBD"
+            app:gaugeStrokeWidth="10dp"
+            app:gaugeSweepAngle="270" />
+
+        <TextView
+            android:id="@+id/txtViewCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtViewAgua"
+            android:layout_alignBottom="@+id/txtViewAgua"
+            android:layout_alignStart="@+id/txtPHView"
+            android:text="T° Calentador" />
+
+        <TextView
+            android:id="@+id/txtViewAgua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/gaugeAgua"
+            android:layout_alignEnd="@+id/txtCloroView"
+            android:text="T° Agua" />
+
+        <TextView
+            android:id="@+id/txtViewDeseada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/gaugeAgua"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"
+            android:text="T° Deseada" />
+
+        <TextView
+            android:id="@+id/txtDeseada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtViewDeseada"
+            android:layout_alignTop="@+id/gaugeAgua"
+            android:layout_marginEnd="23dp"
+            android:layout_marginTop="40dp"
+            android:text="nn" />
+
+        <TextView
+            android:id="@+id/txtPHView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtCloroView"
+            android:layout_alignBottom="@+id/txtCloroView"
+            android:layout_marginStart="31dp"
+            android:text="pH" />
+
+        <TextView
+            android:id="@+id/txtCloroView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/gaugeAgua"
+            android:layout_below="@+id/gaugeAgua"
+            android:layout_marginEnd="46dp"
+            android:layout_marginTop="13dp"
+            android:text="Cloro" />
+
+        <TextView
+            android:id="@+id/txtPH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtCloro"
+            android:layout_alignBottom="@+id/txtCloro"
+            android:layout_alignStart="@+id/txtCloroView"
+            android:text="nn" />
+
+        <TextView
+            android:id="@+id/txtCloro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtPHView"
+            android:layout_below="@+id/txtPHView"
+            android:layout_marginTop="28dp"
+            android:text="nn" />
+
+        <TextView
+            android:id="@+id/txtCalentadorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDeseada"
+            android:layout_toEndOf="@+id/txtCloro"
+            android:text="00.00" />
+
+        <TextView
+            android:id="@+id/txtAguaView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtViewAgua"
+            android:layout_below="@+id/txtDeseada"
+            android:text="00.00" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
